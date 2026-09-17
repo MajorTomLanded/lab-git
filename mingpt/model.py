@@ -45,6 +45,7 @@ class CausalSelfAttention(nn.Module):
         # output projection
         self.c_proj = nn.Linear(config.n_embd, config.n_embd)
         # regularization
+        # spellign is hard
         self.attn_dropout = nn.Dropout(config.attn_pdrop)
         self.resid_dropout = nn.Dropout(config.resid_pdrop)
         # causal mask to ensure that attention is only applied to the left in the input sequence
